@@ -1,0 +1,14 @@
+[Unit]
+Description=Pipes commands from docker container payrik to host
+Wants=graphical.target
+After=graphical.target
+
+[Service]
+ExecStart=/bin/bash /home/orangepi/patrik/pipes/start.sh
+Type=simple
+Restart=on-abort
+User=orangepi
+Group=orangepi
+
+[Install]
+WantedBy=graphical.target
